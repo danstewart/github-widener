@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "GitHub Widener",
+	"version": "0.1",
+	"description": "Expands the GitHub code pane to the full window width.",
+	"homepage": "",
+
+	"icons": {
+		"48": "icons/gh-widener-48.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.github.com/*"],
+			"js": ["widener.js"]
+		}
+	]
+}
