@@ -3,7 +3,7 @@
 	"name": "GitHub Widener",
 	"version": "0.1",
 	"description": "Expands the GitHub code pane to the full window width.",
-	"homepage": "",
+	"homepage": "https://github.com/danstewart/github-widener",
 
 	"icons": {
 		"48": "icons/gh-widener-48.png"
