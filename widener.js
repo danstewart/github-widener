@@ -14,17 +14,9 @@ function widen() {
 	}
 }
 
-// Pretty gross but only thing I can get working
-let oldUrl = '';
-let currentUrl = window.location.href;
-(function watchUrl(currentUrl) {
-	if(currentUrl != oldUrl){
-		widen();
-		oldUrl = currentUrl;
-	}
+// Listen for messages from background.js
+// Need to watch for title changes since GitHub doesn't actually load new pages
+browser.runtime.onMessage.addListener(() => widen());
 
-	oldUrl = window.location.href;
-	setInterval(function() {
-		watchUrl(window.location.href);
-	}, 750);
-})();
+// Run for initial page load
+widen();

@@ -1,17 +1,26 @@
 {
 	"manifest_version": 2,
 	"name": "GitHub Widener",
-	"version": "0.1",
+	"version": "0.2",
 	"description": "Expands the GitHub code pane to the full window width.",
-	"homepage": "https://github.com/danstewart/github-widener",
+	"homepage_url": "https://github.com/danstewart/github-widener",
 
 	"icons": {
 		"48": "icons/gh-widener-48.png"
 	},
 
+	"permissions": [
+		"history",
+		"tabs"
+	],
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
 	"content_scripts": [
 		{
-			"matches": ["*://*.github.com/*"],
+			"matches": ["*://github.com/*"],
 			"js": ["widener.js"]
 		}
 	]
