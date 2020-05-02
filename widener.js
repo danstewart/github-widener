@@ -3,7 +3,7 @@
 // So we need to have a list of all pages that should be wide and remove full-width from the others
 // The downside is this will make any wide pages not in the list smaller...
 function widen() {
-	let validPaths  = ['/blob/', '/commit/', '/pull/\d+/files', '/edit/', '/blame'];
+	let validPaths  = ['/blob/', '/commit/', '/pull/\\d+/files', '/edit/', '/blame'];
 	let isValidPath = validPaths.some(p => new RegExp(p).test(window.location.pathname));
 	let makeWide    = (isValidPath && document.getElementsByClassName('repository-content'));
 
