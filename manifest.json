@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "GitHub Widener",
-	"version": "0.4",
+	"version": "0.5",
 	"description": "Expands the GitHub code pane to the full window width.",
 	"homepage_url": "https://github.com/danstewart/github-widener",
 
