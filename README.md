@@ -6,5 +6,5 @@ Install from [addons.mozilla.org](https://addons.mozilla.org/en-GB/firefox/addon
 ### Publishing
 ```
 npm install --global web-ext
-web-ext build
+web-ext build --overwrite-dest
 ```
